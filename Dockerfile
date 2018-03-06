@@ -10,7 +10,7 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
 
 # instead of an environment we just add root distro to path, container anyways
 ENV PATH /opt/conda/bin:$PATH
-RUN conda update -n base conda
+RUN conda update -y -n base conda
 RUN conda install -y numpy pyyaml scipy ipython mkl pytorch torchvision cuda80 -c soumith
 RUN conda install -y -c conda-forge tensorflow
 RUN conda install -y -c anaconda tensorflow-tensorboard 
