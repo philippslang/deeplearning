@@ -2,7 +2,7 @@ FROM nvidia/cuda:8.0-cudnn7-runtime-centos7
 
 RUN yum install -y git curl bzip2 wget && yum clean all
 
-RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Anaconda3-latest-Linux-x86_64.sh \
     && chmod +x ~/miniconda.sh \
     && ~/miniconda.sh -b -p /opt/conda \   
     && /opt/conda/bin/conda clean -ya \
@@ -11,7 +11,8 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
 # instead of an environment we just add root distro to path, container anyways
 ENV PATH /opt/conda/bin:$PATH
 RUN conda update -y -n base conda
-RUN conda install -y numpy pyyaml scipy ipython mkl pytorch torchvision cuda80 -c soumith
+RUN conda install -y ipython mkl 
+RUN conda install -y pytorch torchvision cuda80 -c soumith
 RUN conda install -y -c anaconda tensorflow-gpu 
 RUN conda install -y -c anaconda tensorflow-tensorboard 
 RUN conda install -y -c anaconda notebook 
