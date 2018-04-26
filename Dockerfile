@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-cudnn6-runtime-centos7
+FROM nvidia/cuda:8.0-cudnn7-runtime-centos7
 
 RUN yum install -y git curl bzip2 wget && yum clean all
 
