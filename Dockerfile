@@ -16,4 +16,4 @@ RUN conda install pytorch torchvision cuda91 -c pytorch
 RUN conda install -y -c anaconda tensorflow-gpu 
 RUN conda install -y -c anaconda tensorflow-tensorboard 
 RUN conda install -y -c anaconda notebook 
-RUN conda install -y -c conda-forge jupyterlab attrdict
+RUN conda install -y -c conda-forge jupyterlab attrdict tensorboardx
