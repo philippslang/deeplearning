@@ -14,7 +14,7 @@ RUN conda update -y -n base conda
 RUN conda install -y ipython mkl 
 RUN conda install pytorch torchvision cuda91 -c pytorch
 RUN conda install -y -c anaconda tensorflow-gpu 
-RUN conda install -y -c anaconda tensorflow-tensorboard 
+RUN pip install tensorboard==1.8.0
 RUN conda install -y -c anaconda notebook 
 RUN conda install -y -c conda-forge jupyterlab attrdict tensorboardx
 
