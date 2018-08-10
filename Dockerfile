@@ -17,3 +17,6 @@ RUN conda install -y -c anaconda tensorflow-gpu
 RUN conda install -y -c anaconda tensorflow-tensorboard 
 RUN conda install -y -c anaconda notebook 
 RUN conda install -y -c conda-forge jupyterlab attrdict tensorboardx
+
+# tensorboard default port
+EXPOSE 6006
